@@ -71,6 +71,7 @@
             <ColumnDefinition Width="275*"/>
         </Grid.ColumnDefinitions>
         <GridSplitter ResizeDirection="Columns" Height="Auto" Width="1" Background="#FFEEEEEE" Grid.Column="1" Grid.Row="1"/>
+        <GridSplitter ResizeDirection="Rows" Height="1" Width="Auto" Background="#FFEEEEEE" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.ColumnSpan="3"/>
         <ToggleButton  HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
                 Background="White">
@@ -111,7 +112,7 @@
                 <Image Source="StaticResources/USA_ICON.png" Width="15" Height="15"/>
             </StackPanel>
         </ToggleButton>
-        <ToggleButton  HorizontalAlignment="Left" Margin="186,20,0,0" VerticalAlignment="Top"  Width="68"
+        <ToggleButton  HorizontalAlignment="Left" Margin="172,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
                 Background="White" Grid.Column="2">
             <StackPanel Orientation="Horizontal">
