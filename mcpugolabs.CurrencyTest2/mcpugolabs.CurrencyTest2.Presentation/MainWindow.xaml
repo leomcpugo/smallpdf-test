@@ -7,21 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="550">
     <Window.Resources>
-        <Style x:Key="currencyBtn" TargetType="Button">
+        <Style x:Key="currencyBtn" TargetType="ToggleButton">
             <Setter Property="Background" Value="#FFFFFF"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="ToggleButton">
                         <Border Name="border" Background="{TemplateBinding Background}" BorderThickness="0,0,0,2" BorderBrush="#FFFFFF" >
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="Button.IsPressed" Value="True">
+                            <Trigger Property="ToggleButton.IsChecked" Value="True">
                                 <Setter TargetName="border" Property="BorderBrush" Value="#EB5757" />
                             </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter  TargetName="border" Property="BorderBrush" Value="#EEEEEE"/>
-                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="ToggleButton.IsChecked" Value="False" />
+                                    <Condition Property="IsMouseOver" Value="True" />
+                                </MultiTrigger.Conditions>
+                                <MultiTrigger.Setters>
+                                    <Setter  TargetName="border" Property="BorderBrush" Value="#EEEEEE"/>
+                                </MultiTrigger.Setters>
+                            </MultiTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -37,14 +43,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
+        <ToggleButton  HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
                 Background="White">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="CHF" VerticalAlignment="Center" />
                 <Image Source="StaticResources/CHF_ICON.png" Width="15" Height="15"/>
             </StackPanel>
-        </Button>
+        </ToggleButton>
 
     </Grid>
 </Window>
