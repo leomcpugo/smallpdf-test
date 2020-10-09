@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mcpugolabs.CurrencyTest2.Presentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="500">
+        Title="MainWindow" Height="200" Width="500" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="currencyBtn" TargetType="ToggleButton">
             <Setter Property="Background" Value="#FFFFFF"/>
@@ -33,21 +33,21 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="swapBtn" TargetType="ToggleButton">
+        <Style x:Key="swapBtn" TargetType="Button">
             <Setter Property="Background" Value="#FFFFFF"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="ToggleButton">
+                    <ControlTemplate TargetType="Button">
                         <Border Name="border" Background="{TemplateBinding Background}" BorderThickness="0" BorderBrush="Transparent" CornerRadius="90" >
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                            <Trigger Property="Button.IsPressed" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#CCCCCC" />
                             </Trigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
-                                    <Condition Property="ToggleButton.IsChecked" Value="False" />
+                                    <Condition Property="Button.IsPressed" Value="False" />
                                     <Condition Property="IsMouseOver" Value="True" />
                                 </MultiTrigger.Conditions>
                                 <MultiTrigger.Setters>
@@ -119,11 +119,11 @@
                 <Image Source="StaticResources/EUR_ICON.png" Width="15" Height="15"/>
             </StackPanel>
         </ToggleButton>
-        <ToggleButton  HorizontalAlignment="Left" Margin="41,20,0,0" VerticalAlignment="Top"  Width="30" Height="30"
+        <Button  HorizontalAlignment="Left" Margin="41,20,0,0" VerticalAlignment="Top"  Width="30" Height="30"
                 Style="{StaticResource swapBtn}"
                 Background="White" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image Source="StaticResources/SWAP_ICON.png" Width="15" Height="15"/>
-        </ToggleButton>
+        </Button>
         <Label Content="CHF" HorizontalAlignment="Left" Margin="10,0,0,6" Grid.Row="1" VerticalAlignment="Bottom"/>
         <Label Content="USD" HorizontalAlignment="Left" Margin="10,0,0,6" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="2"/>
         <TextBox HorizontalAlignment="Left" Margin="42,0,0,6" Grid.Row="1" Text="120" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="198" Grid.ColumnSpan="2" Height="52" BorderBrush="{x:Null}" FontSize="48" FontFamily="Arial"/>
