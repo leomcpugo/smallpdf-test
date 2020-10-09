@@ -38,7 +38,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border Name="border" Background="{TemplateBinding Background}" BorderThickness="0" BorderBrush="Transparent" >
+                        <Border Name="border" Background="{TemplateBinding Background}" BorderThickness="0" BorderBrush="Transparent" CornerRadius="90" >
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -119,7 +119,7 @@
                 <Image Source="StaticResources/EUR_ICON.png" Width="15" Height="15"/>
             </StackPanel>
         </ToggleButton>
-        <ToggleButton  HorizontalAlignment="Left" Margin="41,29,0,0" VerticalAlignment="Top"  Width="30"
+        <ToggleButton  HorizontalAlignment="Left" Margin="41,20,0,0" VerticalAlignment="Top"  Width="30" Height="30"
                 Style="{StaticResource swapBtn}"
                 Background="White" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image Source="StaticResources/SWAP_ICON.png" Width="15" Height="15"/>
