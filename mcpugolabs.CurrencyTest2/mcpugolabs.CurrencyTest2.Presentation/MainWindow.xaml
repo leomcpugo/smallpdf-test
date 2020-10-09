@@ -72,7 +72,7 @@
                 <Image Source="StaticResources/EUR_ICON.png" Width="15" Height="15"/>
             </StackPanel>
         </ToggleButton>
-        <ToggleButton  HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"  Width="68"
+        <ToggleButton  HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
                 Background="White" Grid.Column="2">
             <StackPanel Orientation="Horizontal">
@@ -101,6 +101,10 @@
                 Background="White" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image Source="StaticResources/SWAP_ICON.png" Width="15" Height="15"/>
         </ToggleButton>
+        <Label Content="CHF" HorizontalAlignment="Left" Margin="10,0,0,6" Grid.Row="1" VerticalAlignment="Bottom"/>
+        <Label Content="USD" HorizontalAlignment="Left" Margin="10,108,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="42,0,0,6" Grid.Row="1" Text="120" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="198" Grid.ColumnSpan="2" Height="52" BorderBrush="{x:Null}" FontSize="48" FontFamily="Arial"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,0,10,10" Grid.Row="1" Text="121.45" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="188" Height="52" BorderBrush="{x:Null}" FontSize="48" FontFamily="Arial" Grid.Column="2"/>
 
     </Grid>
 </Window>
