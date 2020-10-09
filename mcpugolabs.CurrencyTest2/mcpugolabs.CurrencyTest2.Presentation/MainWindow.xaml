@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mcpugolabs.CurrencyTest2.Presentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="550">
+        Title="MainWindow" Height="200" Width="500">
     <Window.Resources>
         <Style x:Key="currencyBtn" TargetType="ToggleButton">
             <Setter Property="Background" Value="#FFFFFF"/>
@@ -33,6 +33,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="swapBtn" TargetType="ToggleButton">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Red"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -40,8 +44,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="275*"/>
         </Grid.ColumnDefinitions>
         <ToggleButton  HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
@@ -50,6 +55,51 @@
                 <TextBlock Text="CHF" VerticalAlignment="Center" />
                 <Image Source="StaticResources/CHF_ICON.png" Width="15" Height="15"/>
             </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Left" Margin="83,20,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="USD" VerticalAlignment="Center" />
+                <Image Source="StaticResources/USA_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Left" Margin="156,20,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="EUR" VerticalAlignment="Center" />
+                <Image Source="StaticResources/EUR_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="CHF" VerticalAlignment="Center" />
+                <Image Source="StaticResources/CHF_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="USD" VerticalAlignment="Center" />
+                <Image Source="StaticResources/USA_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Left" Margin="186,20,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="EUR" VerticalAlignment="Center" />
+                <Image Source="StaticResources/EUR_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </ToggleButton>
+        <ToggleButton  HorizontalAlignment="Left" Margin="41,29,0,0" VerticalAlignment="Top"  Width="30"
+                Style="{StaticResource swapBtn}"
+                Background="White" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image Source="StaticResources/SWAP_ICON.png" Width="15" Height="15"/>
         </ToggleButton>
 
     </Grid>
