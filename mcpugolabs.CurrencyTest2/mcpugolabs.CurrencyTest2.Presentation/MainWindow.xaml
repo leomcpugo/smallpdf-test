@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mcpugolabs.CurrencyTest2.Presentation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="550">
+    <Window.Resources>
+        <Style x:Key="currencyBtn" TargetType="Button">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <!--<Border Name="border" BorderBrush="#FF5397D1">-->
+                        <Border Name="border" Background="{TemplateBinding Background}" BorderBrush="#FFFFFF">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsPressed" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#EB5757" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#EEEEEE"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
+                Style="{StaticResource currencyBtn}"
+                Background="White">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="CHF" VerticalAlignment="Center" />
+                <Image Source="StaticResources/CHF_ICON.png" Width="15" Height="15"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Window>

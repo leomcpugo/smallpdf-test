@@ -6,4 +6,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="StaticResources\CHF_ICON.png" />
+    <None Remove="StaticResources\EUR_ICON.png" />
+    <None Remove="StaticResources\USA_ICON.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="StaticResources\CHF_ICON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="StaticResources\EUR_ICON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="StaticResources\USA_ICON.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
