@@ -70,7 +70,7 @@
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="275*"/>
         </Grid.ColumnDefinitions>
-        <GridSplitter ResizeDirection="Columns" Grid.Column="1" Height="Auto" Width="1" HorizontalAlignment="Stretch" Margin="53,0,2,0" Background="#FFEEEEEE" Grid.Row="1"/>
+        <GridSplitter ResizeDirection="Columns" Height="Auto" Width="1" Background="#FFEEEEEE" Grid.Column="1" Grid.Row="1"/>
         <ToggleButton  HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"  Width="68"
                 Style="{StaticResource currencyBtn}"
                 Background="White">
